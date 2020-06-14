@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Message;
-import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.EditText;
@@ -13,7 +12,6 @@ import android.widget.Toast;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
@@ -35,9 +33,9 @@ public class RegisActivity extends AppCompatActivity implements Runnable {
     }
 
     public  void regisedclick(View btn){
-        EditText userid=(EditText) findViewById(R.id.newuserid);
+        EditText userid=(EditText) findViewById(R.id.finduserid);
         id=userid.getText().toString();
-        EditText userpwd=(EditText) findViewById(R.id.newuserpwd);
+        EditText userpwd=(EditText) findViewById(R.id.finduserphone);
         pwd=userpwd.getText().toString();
         Thread t = new Thread(this);
         t.start();
@@ -57,7 +55,7 @@ public class RegisActivity extends AppCompatActivity implements Runnable {
         if((id!=null) && (pwd!=null)){
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection conn= DriverManager.getConnection("jdbc:mysql://10.63.151.38:3306/jsp_final", "root", "wnj123456");//远程链接地址，用户名，密码
+            Connection conn= DriverManager.getConnection("jdbc:mysql://10.43.102.212:3306/jsp_final", "root", "wnj123456");//远程链接地址，用户名，密码
             Statement stmt=conn.createStatement();
             String sql="insert into users values('"+id+"','"+pwd+"')";
             stmt.executeUpdate(sql);

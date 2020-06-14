@@ -37,7 +37,7 @@
             android:background="#99000000">
 
             <EditText
-                android:id="@+id/newuserid"
+                android:id="@+id/finduserid"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -58,7 +58,7 @@
                 android:layout_marginBottom="5dp"></View>
 
             <EditText
-                android:id="@+id/newuserpwd"
+                android:id="@+id/finduserphone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -77,7 +77,7 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/regis"
+                android:id="@+id/find"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="40dp"

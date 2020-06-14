@@ -27,9 +27,9 @@ public class MainActivity extends AppCompatActivity implements Runnable {
         handler=new MyHandler();
     }
     public  void loginclick(View btn){
-        EditText userid=(EditText) findViewById(R.id.newuserid);
+        EditText userid=(EditText) findViewById(R.id.finduserid);
         id=userid.getText().toString();
-        EditText userpwd=(EditText) findViewById(R.id.newuserpwd);
+        EditText userpwd=(EditText) findViewById(R.id.finduserphone);
         pwd=userpwd.getText().toString();
         Thread t = new Thread(this);
         t.start();
@@ -42,6 +42,10 @@ public class MainActivity extends AppCompatActivity implements Runnable {
             Log.i("b","判断为假");
             Toast.makeText(this,"请重新输入",Toast.LENGTH_SHORT).show();
         }
+    }
+    public void findclick(View btn){
+        Intent find=new Intent(this,FindActivity.class);
+        startActivityForResult(find,1);
     }
 
 
@@ -61,7 +65,7 @@ public class MainActivity extends AppCompatActivity implements Runnable {
             Log.i("das","子线程开启正常");
             Class.forName("com.mysql.jdbc.Driver");
             Log.i("dass","查找驱动正常");
-            Connection conn= DriverManager.getConnection("jdbc:mysql://10.63.151.38:3306/jsp_final", "root", "wnj123456");//远程链接地址，用户名，密码
+            Connection conn= DriverManager.getConnection("jdbc:mysql://10.43.102.212:3306/jsp_final", "root", "wnj123456");//远程链接地址，用户名，密码
             Log.i("dasss","成功来链接数据库");
             Statement stmt=conn.createStatement();
             String sql="select * from users where Username='"+id+"' and Userpwd='"+pwd+"'";
