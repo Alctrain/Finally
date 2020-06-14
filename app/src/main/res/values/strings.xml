@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Finally</string>
+    <string name="Welcome">欢迎</string>
+    <string name="id">账户名</string>
+    <string name="pwd">密码</string>
+    <string name="forget">忘记密码？</string>
+    <string name="zhao">点击找回</string>
+    <string name="login">登录</string>
+    <string name="zhuce">注册</string>
+    <string name="welregis">欢迎注册</string>
+    <string name="regisname">请输入您想要的账户名</string>
+    <string name="regispwd">请输入您想要的密码</string>
+</resources>
