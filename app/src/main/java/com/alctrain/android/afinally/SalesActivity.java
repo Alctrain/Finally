@@ -6,8 +6,18 @@ import android.app.ListActivity;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
+import android.widget.SimpleAdapter;
+
+import java.util.ArrayList;
+import java.util.HashMap;
 
 public class SalesActivity extends ListActivity {
+
+    MyHandler handler;
+    private ArrayList<HashMap<String, String>> listItems; // 存放文字、图片信息
+    private SimpleAdapter listItemAdapter; // 适配器
+    private int msgWhat = 7;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

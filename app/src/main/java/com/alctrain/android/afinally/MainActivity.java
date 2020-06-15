@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity implements Runnable {
             Log.i("das","子线程开启正常");
             Class.forName("com.mysql.jdbc.Driver");
             Log.i("dass","查找驱动正常");
-            Connection conn= DriverManager.getConnection("jdbc:mysql://10.43.102.212:3306/jsp_final", "root", "wnj123456");//远程链接地址，用户名，密码
+            Connection conn= DriverManager.getConnection("jdbc:mysql://10.63.141.109:3306/jsp_final", "root", "wnj123456");//远程链接地址，用户名，密码
             Log.i("dasss","成功来链接数据库");
             Statement stmt=conn.createStatement();
             String sql="select * from users where Username='"+id+"' and Userpwd='"+pwd+"'";
