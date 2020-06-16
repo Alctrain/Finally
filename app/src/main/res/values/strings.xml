@@ -23,4 +23,6 @@
     <string name="xuanzhong">选中</string>
     <string name="xuanz">选中</string>
     <string name="add">加入购物车</string>
+    <string name="paid">支付</string>
+    <string name="getinto">我的购物车</string>
 </resources>

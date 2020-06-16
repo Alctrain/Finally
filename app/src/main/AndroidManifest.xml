@@ -11,7 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".Goods"></activity>
+
+
+        <activity android:name=".GouwuActivity" />
+        <activity android:name=".PaidActivity" />
+        <activity android:name=".Goods" />
         <activity android:name=".FindActivity" />
         <activity android:name=".SalesActivity" />
         <activity android:name=".RegisActivity" />

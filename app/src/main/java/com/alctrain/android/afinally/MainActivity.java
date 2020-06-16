@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Message;
 import android.util.Log;
+import android.view.Menu;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.EditText;
@@ -26,6 +27,8 @@ public class MainActivity extends AppCompatActivity implements Runnable {
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
         handler=new MyHandler();
     }
+
+
     public  void loginclick(View btn){
         EditText userid=(EditText) findViewById(R.id.finduserid);
         id=userid.getText().toString();
@@ -65,7 +68,7 @@ public class MainActivity extends AppCompatActivity implements Runnable {
             Log.i("das","子线程开启正常");
             Class.forName("com.mysql.jdbc.Driver");
             Log.i("dass","查找驱动正常");
-            Connection conn= DriverManager.getConnection("jdbc:mysql://10.63.245.123:3306/jsp_final", "root", "wnj123456");//远程链接地址，用户名，密码
+            Connection conn= DriverManager.getConnection("jdbc:mysql://10.63.145.223:3306/jsp_final", "root", "wnj123456");//远程链接地址，用户名，密码
             Log.i("dasss","成功来链接数据库");
             Statement stmt=conn.createStatement();
             String sql="select * from users where Username='"+id+"' and Userpwd='"+pwd+"'";
