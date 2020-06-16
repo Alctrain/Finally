@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/first"
     android:orientation="vertical"
     tools:context=".PaidActivity">
 
@@ -26,8 +27,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="6"
-        app:srcCompat="@drawable/diguo"
-        android:scaleType="fitXY"/>
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/diguo" />
 
     <Button
         android:id="@+id/pay"

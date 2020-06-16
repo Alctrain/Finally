@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Message;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.EditText;
@@ -32,6 +34,8 @@ public class RegisActivity extends AppCompatActivity implements Runnable {
         handler=new MyHandler();
     }
 
+
+
     public  void regisedclick(View btn){
         EditText userid=(EditText) findViewById(R.id.finduserid);
         id=userid.getText().toString();
@@ -55,7 +59,7 @@ public class RegisActivity extends AppCompatActivity implements Runnable {
         if((id!=null) && (pwd!=null)){
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection conn= DriverManager.getConnection("jdbc:mysql://10.63.145.223:3306/jsp_final", "root", "wnj123456");//远程链接地址，用户名，密码
+            Connection conn= DriverManager.getConnection("jdbc:mysql://192.168.137.1:3306/jsp_final", "root", "wnj123456");//远程链接地址，用户名，密码
             Statement stmt=conn.createStatement();
             String sql="insert into users values('"+id+"','"+pwd+"')";
             stmt.executeUpdate(sql);

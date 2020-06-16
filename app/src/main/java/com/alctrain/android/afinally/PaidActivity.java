@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -26,6 +28,22 @@ public class PaidActivity extends AppCompatActivity {
         String d2="一共需要支付"+b+"元";
         a1.setText(d1);
         a2.setText(d2);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if(item.getItemId()==R.id.menu_set){
+            Intent config = new Intent(this, GouwuActivity.class);
+            startActivity(config);
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 
     public void finalpayclick(View btn){
