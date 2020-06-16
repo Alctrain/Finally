@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".FindActivity"></activity>
+        <activity android:name=".Goods"></activity>
+        <activity android:name=".FindActivity" />
         <activity android:name=".SalesActivity" />
         <activity android:name=".RegisActivity" />
         <activity android:name=".MainActivity">

@@ -20,4 +20,7 @@
     <string name="find">找回密码</string>
     <string name="findzhanhu">找回密码</string>
     <string name="phone">请输入您注册时的手机号</string>
+    <string name="xuanzhong">选中</string>
+    <string name="xuanz">选中</string>
+    <string name="add">加入购物车</string>
 </resources>

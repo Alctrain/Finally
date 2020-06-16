@@ -55,7 +55,7 @@ public class RegisActivity extends AppCompatActivity implements Runnable {
         if((id!=null) && (pwd!=null)){
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection conn= DriverManager.getConnection("jdbc:mysql://10.63.141.109:3306/jsp_final", "root", "wnj123456");//远程链接地址，用户名，密码
+            Connection conn= DriverManager.getConnection("jdbc:mysql://10.63.245.123:3306/jsp_final", "root", "wnj123456");//远程链接地址，用户名，密码
             Statement stmt=conn.createStatement();
             String sql="insert into users values('"+id+"','"+pwd+"')";
             stmt.executeUpdate(sql);
